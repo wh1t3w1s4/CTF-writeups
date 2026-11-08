@@ -1,5 +1,6 @@
 # Máquina Meow 
 
+#### OS: Linux
 #### Tier: Starting Point
 #### Released on: 30/09/2021
 #### IP de ejemplo: 10.129.108.168
