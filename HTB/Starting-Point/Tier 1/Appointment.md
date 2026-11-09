@@ -1,6 +1,6 @@
 # Máquina Appointment
 
-#### OS: Windows
+#### OS: Linux
 #### Tier: Starting Point
 #### Released on: 6/10/2021
 #### IP de ejemplo: 10.129.111.49
