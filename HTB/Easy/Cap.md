@@ -77,6 +77,8 @@ nada por aquí. Probemos FTP, pues era otro puerto abierto
 
 algo llama la atención: se está tramitando una petición de login, con credenciales en texto claro
 
+![image](assets/cap-pass.png)
+
 `Buck3tH4TF0RM3!`
 
 ## Initial Infiltration
