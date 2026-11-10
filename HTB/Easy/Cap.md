@@ -15,7 +15,6 @@ PORT   STATE SERVICE REASON
 21/tcp open  ftp     syn-ack ttl 63
 22/tcp open  ssh     syn-ack ttl 63
 80/tcp open  http    syn-ack ttl 63
-
 ```
 tres puertos abiertos: 21/FTP, 22/SSH y 80/HTTP. Vamos a lanzar los scripts básicos de nmap con el argumento -sC y tratemos de detectar la versión para cada servicio con -sV 
 > recordad que se pueden unir en uno solo: -sCV
@@ -40,7 +39,6 @@ PORT   STATE SERVICE VERSION
 |     Server: gunicorn
 |     Date: Tue, 10 Nov 2026 15:53:00 GMT
 <SNIP>
-
 ```
 FTP no tiene el anonymous login permitido, por lo que llevemos nuesto reconocimiento a la web en el puerto 80 por ahora. Vamos a lanzar whatweb para ver si detecta tecnologías o algo interesante antes de entrar por el navegador
 
@@ -167,7 +165,3 @@ Pwning....
 # whoami
 root
 ```
-
-
-
-
