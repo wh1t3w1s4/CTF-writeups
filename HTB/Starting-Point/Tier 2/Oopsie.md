@@ -71,7 +71,7 @@ las dos siguientes muestran datos generales, que podemos modificar por el paráe
 
 la página de ?content=uploads es interesante, muestra que debemos tener más privilegios para acceder a ella. Si lo logramos podríamos tratar de subir un archivo php malicioso (dado que la página está escrita en php) y ejecutar comandos.
 
-![image](assets/oopsie-uploads.png)
+![image](assets/oopsie-upload.png)
 
 seguimos investigando la página: si inspeccionamos las cookies con F12 -> Application -> Cookies podemos ver que el accessid visto previamente en `?content=accounts&id=2` coincide con nuestra cookie `user`. 
 
