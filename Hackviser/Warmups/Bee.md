@@ -48,7 +48,7 @@ guardamos los cambios con `Crtl+o Enter Ctrl+x`y recargamos la página
 
 parece un login simple, probemos una SQL injection simple en el campo password, nos devuelve `Email or password incorrect`. Ahora probemos en el campo Email
 
-![image](assets/bee-login2.png)
+![image](assets/bee-error.png)
 
 se aplica algún pequeño filtro, antes de tirar SqlMap vamos a interceptar la petición con Caido y modificamos el input desde el proxy.
 
