@@ -41,7 +41,11 @@ no disponemos de credenciales válidas, probemos a registrarnos, ya que se nos d
 
 ![imagen](assets/aidor-reg.png)
 
-al registrarnos entramos directamente a un panel, donde aparecen datos generales ficticios y `nuestra contraseña en un hash` (una muy mala práctica de por sí; los hashes deben estar en una base de datos bien protegida para evitar ataques. Cualquier error de autenticación/API o un ataque de XSS podría llevar a un account takeover muy rápidamente con esta práctica)
+al registrarnos entramos directamente a un panel, 
+
+![imagen](assets/aidor-dash.png)
+
+aquí aparecen datos generales ficticios y `nuestra contraseña en un hash` (una muy mala práctica de por sí; los hashes deben estar en una base de datos bien protegida para evitar ataques. Cualquier error de autenticación/API o un ataque de XSS podría llevar a un account takeover muy rápidamente con esta práctica)
 
 metamos el hash en un archivo hash.txt, e identifiquémoslo con `hashcat`
 
