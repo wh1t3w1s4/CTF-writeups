@@ -59,7 +59,7 @@ es un panel de login. Credenciales como `admin/admin` o `admin/password` no son 
 
 ![imagen](assets/duque-admin.png)
 
-podemos ver detalles de facturas, podemos ver un id `xya456` para enero y un id `xyu597` para febrero, aunque por el formato podemos asumir que hay más. Dado que se refleja en la URL (http://172.17.0.2/bills/panel.php?id=xyu597) podemos construir un script muy simple que automatice la detección para buscar más posibles facturas, asumiendo el formato xylnnn siendo l una letra lowercase y n un número:
+podemos ver detalles de facturas, podemos ver un id `xya456` para enero y un id `xyu597` para febrero, aunque por el formato podemos asumir que hay más. Dado que se refleja en la URL (http://172.17.0.2/bills/panel.php?id=xyu597) podemos construir un script muy simple que automatice la detección para buscar más posibles facturas, asumiendo el formato xylnnn siendo l una letra lowercase y n un número: 
 
 ```
 #!/usr/bin/env python3
